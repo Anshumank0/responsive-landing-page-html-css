@@ -15,8 +15,8 @@ img {
 }
 .btn{
     display: inline-block;
-    color: white;
-    background: black;
+    color:var(--clr-text,#fff);
+    background: var(--clr-bg,brown);
     padding: .3em .9em;
     text-decoration: none;
     font-size: 1.2em;
