@@ -5,24 +5,29 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     font-family: "Poppins", sans-serif;
 }
-.spacing > *+*{
+
+.spacing>*+* {
     margin: 1.2em 0;
 }
+
 img {
     max-width: 100%;
     display: block;
 }
+
 .container {
     max-width: 85%;
     margin: 0 auto;
 }
-section{
-    padding:2em 0;
+
+section {
+    padding: 2em 0;
 }
-.btn{
+
+.btn {
     display: inline-block;
-    color:var(--clr-text,#fff);
-    background: var(--clr-bg,#444);
+    color: var(--clr-text, #fff);
+    background: var(--clr-bg, #444);
     padding: .5em 1.4em;
     text-decoration: none;
     font-size: 1.2em;
@@ -30,65 +35,91 @@ section{
     border-radius: .3em;
     margin: .3em 0;
     transition: transform 230ms ease-in-out,
-    opacity 250ms linear;
+        opacity 250ms linear;
 }
+
 .btn:hover,
-.btn:focus{
+.btn:focus {
     transform: scale(1.1);
     opacity: .9;
 }
-.main-text{
-    font-size: clamp(2.2em, 5vw, 3.2em); 
-    line-height: 1;   
+
+.main-text {
+    font-size: clamp(2.2em, 5vw, 3.2em);
+    line-height: 1;
 }
-.head{
+
+.head {
     text-align: center;
     padding: 18em 0;
     background-image: #111;
     color: #fff;
-    @supports (background-blend-mode:multiply){
+
+    @supports (background-blend-mode:multiply) {
         background-image: url(img/shoe-3.png),
-        radial-gradient(#444,#111);
+            radial-gradient(#444, #111);
         background-blend-mode: multiply;
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center center;
     }
 }
-.out-items{
-    background:#eee;
+
+.out-items {
+    background: #eee;
 }
-.main-title{
-    text-align:center;
-    font-size:clamp(1.8em, 2.2vw, 2.8em);
+
+.main-title {
+    text-align: center;
+    font-size: clamp(1.8em, 2.2vw, 2.8em);
 }
-.items{
-    display:flex;
-    justify-content:center;
+
+.items {
+    display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 6em;
     margin-top: 2em;
 }
-.item{
+
+.item {
     flex-basis: 18%;
     min-width: 10em;
     transform: scale(.95);
-    transition:transform 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
     position: relative;
-    
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: #444;
+
     &:hover,
-    &:focus{
-        transform:scale(1.1);
+    &:focus {
+        transform: scale(1.1);
+
+        .item-detail {
+            opacity: 1;
+        }
     }
 
     &::after {
-        content:'';
+        content: '';
         position: absolute;
-        background:#2193b0;
+        background: #2193b0;
         padding: 85% 85% 0 0;
         top: 0;
         left: 0;
         border-radius: 50%;
         z-index: -1;
+    }
+}
+
+.item-detail {
+    opacity: 0;
+    transition: opacity 250ms linear;
+
+    .price {
+        display: block;
+        font-size: 1.1em;
     }
 }
