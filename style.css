@@ -124,7 +124,7 @@ section {
     }
 }
 
-.Our-products{
+.Our-products {
 
     & h2 {
         text-align: center;
@@ -132,26 +132,65 @@ section {
         margin-bottom: 1.1em;
     }
 
-    & .product{
-        background: radial-gradient(var(--clr-inner,#444),var(--clr-outer,#111));
-        text-align: center;
+    & .product {
+        background: radial-gradient(var(--clr-inner, #444), var(--clr-outer, #111));
         padding: 2em;
         margin-bottom: 3.5em;
-        border-radius:1em;
+        border-radius: 1em;
     }
 
-    & .product-img{
+    & .product-img {
         margin: -5em 0 0 0;
+        width: 100%;
     }
 
-    & .product-detail{
-        font-size: clamp(2.2em, 3.5vw, 3.2em);
-        line-height: 1em;
+    & .product-detail {
+        font-size: clamp(2em, 4.3vw, 5em);
+        line-height: 1.1em;
         margin: .5em 0;
         color: #fff;
     }
 
-    & .product-description{
-        margin: .5em 0;
+    & .product-description {
+        margin: .8em 0;
+    }
+
+    @media (min-width: 50em) {
+
+        & .container {
+            max-width: 65%;
+            margin: 0 auto;
+        }
+
+        & .product-img {
+            float: right;
+            width: 72%;
+            margin: -5em -5em 0 0;
+        }
+
+        & .product {
+            margin-bottom: 6em;
+        }
+
+        & .red-shoe{
+            .product-img{
+                shape-outside: url(img/shoe-1.png);
+                shape-margin: 1em;
+            }
+        }
+        & .black-shoe{
+            .product-img{
+                shape-outside: url(img/shoe-3.png);
+                shape-margin: 1em;
+            }
+        }
+        & .whitemix-shoe{
+            .product-img{
+                float: left;
+                shape-outside: url(img/shoe-2.png);
+                shape-margin: 1em;
+                margin: -3em 0 -5em 0;
+            }
+        }
     }
 }
