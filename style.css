@@ -123,3 +123,35 @@ section {
         font-size: 1.1em;
     }
 }
+
+.Our-products{
+
+    & h2 {
+        text-align: center;
+        font-size: clamp(2em, 2.5vw, 3em);
+        margin-bottom: 1.1em;
+    }
+
+    & .product{
+        background: radial-gradient(var(--clr-inner,#444),var(--clr-outer,#111));
+        text-align: center;
+        padding: 2em;
+        margin-bottom: 3.5em;
+        border-radius:1em;
+    }
+
+    & .product-img{
+        margin: -5em 0 0 0;
+    }
+
+    & .product-detail{
+        font-size: clamp(2.2em, 3.5vw, 3.2em);
+        line-height: 1em;
+        margin: .5em 0;
+        color: #fff;
+    }
+
+    & .product-description{
+        margin: .5em 0;
+    }
+}
