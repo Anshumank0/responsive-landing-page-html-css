@@ -137,6 +137,7 @@ section {
         padding: 2em;
         margin-bottom: 3.5em;
         border-radius: 1em;
+        text-align: center;
     }
 
     & .product-img {
@@ -152,7 +153,7 @@ section {
     }
 
     & .product-description {
-        margin: .8em 0;
+        margin: 1.5em 0;
     }
 
     @media (min-width: 50em) {
@@ -164,12 +165,13 @@ section {
 
         & .product-img {
             float: right;
-            width: 72%;
+            width: 70%;
             margin: -5em -5em 0 0;
         }
 
         & .product {
-            margin-bottom: 6em;
+            margin-bottom: 9em;
+            text-align: left;
         }
 
         & .red-shoe{
@@ -193,4 +195,19 @@ section {
             }
         }
     }
+}
+.red-shoe{
+    --clr-inner:#faa700;
+    --clr-outer:#e48d00;
+    --clr-bg:#a1173c;
+}
+.whitemix-shoe{
+    --clr-inner:#fce4b3;
+    --clr-outer:#eac886;
+    --clr-bg:#2f4858;
+}
+.red-shoe{
+    --clr-inner:#6dd5ed;
+    --clr-outer:#2193b0;
+    --clr-bg:#008951;
 }
